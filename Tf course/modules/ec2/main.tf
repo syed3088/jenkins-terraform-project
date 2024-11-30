@@ -56,3 +56,5 @@ provisioner "remote-exec" {
     Name = var.instance_name
   }
 }
+
+
