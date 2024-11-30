@@ -35,7 +35,7 @@ resource "aws_instance" "example" {
 
   vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]
 
-  /*provisioner "remote-exec" {
+  provisioner "remote-exec" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
@@ -51,7 +51,7 @@ resource "aws_instance" "example" {
     "sudo systemctl enable apache2",                 # Enable Apache HTTP server to start on boot
     "sudo ufw allow 'Apache'  # Allow HTTP traffic through firewall"  # Open HTTP port in firewall (if UFW is enabled)
   ]
-  }*/
+  }
 
   tags = {
     Name = var.instance_name
