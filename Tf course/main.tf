@@ -9,5 +9,5 @@ module "ec2_instance" {
   ami_id           = "ami-0866a3c8686eaeeba"                                      # Replace with your AMI ID
   key_pair_name    = "terraform-kp"                                               # Your key pair name
   allowed_cidr     = ["0.0.0.0/0"]                                                # Open SSH access to everyone (adjust as necessary)
-  private_key_path = file("Tf course/terraform-kp.pem") # Path to your private key
+  private_key_path = "./terraform-kp.pem" # Path to your private key
 }
