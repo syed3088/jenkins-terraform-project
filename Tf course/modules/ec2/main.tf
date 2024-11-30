@@ -54,9 +54,11 @@ provisioner "remote-exec" {
     
     "sudo systemctl start apache2",                 # Start Apache HTTP server
     "sudo systemctl enable apache2",                # Enable Apache to start on boot
+    "sudo systemctl restart apache2",               # Restart Apache HTTP server to apply changes
     "sudo ufw allow 'Apache' # Allow HTTP traffic through firewall"
   ]
 }
+
 
   tags = {
     Name = var.instance_name
